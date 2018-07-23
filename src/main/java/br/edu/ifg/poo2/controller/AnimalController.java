@@ -1,6 +1,6 @@
 package br.edu.ifg.poo2.controller;
 
-import br.edu.ifg.poo2.dao.RacaRepository;
+import br.edu.ifg.poo2.repository.RacaRepository;
 import br.edu.ifg.poo2.model.Tamanho;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
