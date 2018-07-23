@@ -16,9 +16,10 @@ public class AnimalController {
 
     @RequestMapping(value = "/cadastro-animal", method = RequestMethod.GET)
     public ModelAndView cadastro() {
-        ModelAndView modelAndView = new ModelAndView("principal");
+        ModelAndView modelAndView = new ModelAndView("cadastro-animal");
         modelAndView.addObject("tamanhos", Tamanho.values());
         modelAndView.addObject("racas", racaRepository.findAll());
         return modelAndView;
     }
+
 }
