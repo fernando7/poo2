@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maya Tinder - Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" id="bootstrap-css" href="css/bootstrap.min.css"/>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/cadastro.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="login">
+    <div class="container">
+
+        <div class="col-lg-8 col-lg-offset-2 login-box">
+            <form action="cadastro" method="post">
+                <div class="col-lg-6 left-box">
+                    <h1>Cadastre seu pet</h1>
+
+
+                    <div class="form2">
+
+                        <div class="form-group div1">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="descricao" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea type="text" id="descricao" name="descricao" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="raca">Raça</label>
+                            <select id="raca" th:field="*{racas}">
+                                <option value="">Selecione a raça</option>
+                                <option th:each="raca : ${racas}" th:value="${raca.id}" th:text="${raca.descricao}" selected="selected"></option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- right-box -->
+
+                <div class="col-lg-6 right-box">
+                    <img class="profile-img" src="img/pet.png"
+                         alt="">
+
+                    <div class="form-group">
+                        <label for="descricao">Data Nascimento</label>
+                        <input type="date" id="data-nascimento" name="dataNascimento" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="raca">Tamanho</label>
+                        <select id="tamanho" th:field="*{tamanhos}">
+                            <option value="">Selecione o tamanho</option>
+                            <option th:each="tamanho : ${tamanhos}" th:value="${tamanho}" th:text="${tamanho}" selected="selected"></option>
+                        </select>
+
+                    </div>
+
+                    <div class="login-button">
+                        <button type="submit" class="btn btn-default white-btn" href="principal.html">Cadastrar
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <!--col-lg-8-->
+
+    </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.js"></script>
+</body>
+
+</html>
