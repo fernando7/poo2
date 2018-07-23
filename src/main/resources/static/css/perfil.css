@@ -1,0 +1,140 @@
+/* USER PROFILE PAGE */
+.card {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: rgba(214, 224, 226, 0.2);
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+}
+.card.hovercard .card-background {
+    height: 130px;
+}
+.card-background img {
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -o-filter: blur(25px);
+    -ms-filter: blur(25px);
+    filter: blur(25px);
+    margin-left: -100px;
+    margin-top: -200px;
+    min-width: 130%;
+}
+.card.hovercard .useravatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .useravatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.card.hovercard .card-info {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .card-info .card-title {
+    padding:0 5px;
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.card.hovercard .card-info {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+.btn-pref .btn {
+    -webkit-border-radius:0 !important;
+}
+
+.navfar {
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+    z-index: 16;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    height: 77px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-bottom: 1px solid transparent;
+}
+.navbar span {
+    position:relative;
+    top:5px;
+    background: url(https://goo.gl/NLUdLH);
+    background-position: 0px 0px;
+    height: 51px;
+    width: 177px;
+    display: inline-block;
+    -webkit-transition: .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    -o-transition: .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.navbar a i {
+    position:relative;
+    top:-10px;
+    font-size: 45px;
+    height: 43px;
+    width: 43px;
+    line-height: 42px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 6px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
