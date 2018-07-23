@@ -1,4 +1,4 @@
-package br.edu.ifg.poo2.dao;
+package br.edu.ifg.poo2.repository;
 
 import br.edu.ifg.poo2.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;

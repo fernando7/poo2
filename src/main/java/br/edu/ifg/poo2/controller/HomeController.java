@@ -1,6 +1,6 @@
 package br.edu.ifg.poo2.controller;
 
-import br.edu.ifg.poo2.dao.AnimalRepository;
+import br.edu.ifg.poo2.repository.AnimalRepository;
 import br.edu.ifg.poo2.model.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
