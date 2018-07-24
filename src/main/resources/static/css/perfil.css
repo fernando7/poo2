@@ -115,7 +115,7 @@
 .navbar span {
     position:relative;
     top:5px;
-    background: url(https://goo.gl/NLUdLH);
+    background: url();
     background-position: 0px 0px;
     height: 51px;
     width: 177px;
@@ -137,4 +137,17 @@
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
+}   
+a.btn:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+a.btn {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
 }

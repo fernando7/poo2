@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" id="bootstrap-css" href="../bootstrap/css/bootstrap.min.css" />
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
-    <link href="css/perfil.css" rel="stylesheet">
-   
+    <link href="../css/perfil.css" rel="stylesheet">
+    <link href="../css/perfil.css" th:href="@{../css/perfil.css}"  rel="stylesheet" media="screen" />
   </head>
 
   <body>
@@ -51,15 +51,171 @@
             <div class="well">
           <div class="tab-content">
             <div class="tab-pane fade in active" id="tab1">
-              
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-addon" id="basic-addon2">@example.com</span>
-                    </div>
+
+                <table width="100%" class="display" id="cachorro" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Nome:</strong>
+                            </td>
+                            <td>Maya</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Data Nascimento:</strong>
+                            </td>
+                            <td>03/12/2015</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Raça:</strong>
+                            </td>
+                            <td>Crocker Spaniel</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Porte:</strong>
+                            </td>
+                            <td>Pequeno</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Descrição:</strong>
+                            </td>
+                            <td>Dog travessa</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="btn btn-warning a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <span><strong>Editar</strong></span>            
+                                </a>                            
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-warning a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                     <span><strong>Remover</strong></span>            
+                                 </a>                             
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
 
             </div>
+
+            <!-- TAB 2-->
+            
             <div class="tab-pane fade in" id="tab2">
-              <h3>This is tab 2</h3>
+  
+                
+                <table width="100%" class="display" id="dono" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Nome:</strong>
+                            </td>
+                            <td>Matheus</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sobrenome</strong>
+                            </td>
+                            <td>Lima</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Telefone:</strong>
+                            </td>
+                            <td>33333333</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>email:</strong>
+                            </td>
+                            <td>teste@teste.com</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#" class="btn btn-warning a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <span><strong>Editar</strong></span>            
+                                </a>                            
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-warning a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                     <span><strong>Remover</strong></span>            
+                                 </a>                             
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            <h2>Lista de Cachorros</h2>
+            
+        <table width="100%" class="display" id="myTable" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Raça</th>
+                    <th>Data de Nascimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Maya
+                    </td>
+                    <td>Crocker</td>
+                    <td>03/12/2015</td>
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            <span><strong>Ver</strong></span>            
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Editar</strong></span>            
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Remover</strong></span>            
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Poly
+                    </td>
+                    <td>Vira-lata</td>
+                    <td>03/12/2015</td>
+                    
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            <span><strong>Ver</strong></span>            
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Editar</strong></span>            
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Remover</strong></span>            
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+    </table>    
             </div>
             <div class="tab-pane fade in" id="tab3">
                 <div class="row">
