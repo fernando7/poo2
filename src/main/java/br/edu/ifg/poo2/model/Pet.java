@@ -1,12 +1,13 @@
 package br.edu.ifg.poo2.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
-public class Animal {
+public class Pet {
 
     @Id
+    @Column
     @GeneratedValue
     private Long id;
 
@@ -16,25 +17,26 @@ public class Animal {
     @Column(length = 200)
     private String descricao;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
 
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
     private Raca raca;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "data_inclusao")
-    private Date dataInclusao;
+    private LocalDate dataInclusao;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 15)
     private Tamanho tamanho;
 
+    @Column(length = 30)
+    private String cor;
+
     @PrePersist
     void createdAt() {
-        this.dataInclusao = new Date();
+        this.dataInclusao = LocalDate.now();
     }
 
     public Long getId() {
@@ -53,11 +55,11 @@ public class Animal {
         this.nome = nome;
     }
 
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -69,11 +71,11 @@ public class Animal {
         this.raca = raca;
     }
 
-    public Date getDataInclusao() {
+    public LocalDate getDataInclusao() {
         return dataInclusao;
     }
 
-    public void setDataInclusao(Date dataInclusao) {
+    public void setDataInclusao(LocalDate dataInclusao) {
         this.dataInclusao = dataInclusao;
     }
 
@@ -83,5 +85,21 @@ public class Animal {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setTamanho(Tamanho tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public Tamanho getTamanho() {
+        return tamanho;
     }
 }

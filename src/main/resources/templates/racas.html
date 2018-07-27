@@ -2,7 +2,7 @@
     <label for="raca">Raça</label>
 
     <div class="input-group">
-        <select name="racaId" class="form-control" id="raca" th:field="*{racas}">
+        <select name="racaId" class="form-control" id="raca" th:field="${racas}">
             <option th:each="raca : ${racas}"
                     th:value="${raca.id}"
                     th:text="${raca.descricao}"

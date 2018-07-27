@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Maya Tinder - Cadastro Animal</title>
+    <title>Maya Tinder - Cadastro Pet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" id="bootstrap-css" href="css/bootstrap.min.css"/>
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
     <div class="container">
 
         <div class="col-lg-8 col-lg-offset-2 login-box">
-            <form action="cadastro" method="post">
+            <form action="cadastro-pet" method="post">
                 <div class="col-lg-6 left-box">
                     <h1>Cadastre seu pet</h1>
 
@@ -23,7 +23,7 @@
 
                         <div class="form-group div1">
                             <label for="nome">Nome</label>
-                            <input id="nome" name="descricao" class="form-control" required>
+                            <input id="nome" name="nome" class="form-control" required>
                         </div>
 
                         <div class="form-group">
@@ -34,10 +34,10 @@
 
                         <div class="form-group">
                             <div class="racas">
-                                <label for="raca">Raça</label>
+                                <label for="sel-raca">Raça</label>
 
                                 <div class="input-group">
-                                    <select name="racaId" class="form-control" id="raca" th:field="*{racas}">
+                                    <select class="form-control" id="sel-raca" th:field="*{racas}">
                                         <option value="">Selecione a raça</option>
                                         <option th:each="raca : ${racas}"
                                                 th:value="${raca.id}"
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="login-button">
-                        <button type="submit" class="btn-cadastro2 btn btn-default orange-btn" href="principal.html">
+                        <button type="submit" class="btn-cadastro2 btn btn-default orange-btn">
                             Cadastrar
                         </button>
                     </div>
@@ -124,6 +124,6 @@
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/cadastro-animal.js"></script>
+<script src="js/cadastro-pet.js"></script>
 </body>
 </html>
