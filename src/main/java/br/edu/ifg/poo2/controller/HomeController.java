@@ -4,6 +4,7 @@ import br.edu.ifg.poo2.model.Pet;
 import br.edu.ifg.poo2.repository.PetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,11 +26,9 @@ public class HomeController {
     }
 
     @GetMapping("/localizar")
-    public ModelAndView localizar(ModelAndView modelAndView, String filtro) {
+    public String localizar(Model model, String filtro) {
         List<Pet> animais = petRepository.findByNomeContainingOrDescricaoContaining(filtro, filtro);
-
-        modelAndView.setViewName("principal");
-        modelAndView.addObject(animais);
-        return modelAndView;
+        model.addAttribute("animais", animais);
+        return "principal";
     }
 }

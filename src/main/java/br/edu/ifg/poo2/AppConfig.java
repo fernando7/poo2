@@ -3,6 +3,7 @@ package br.edu.ifg.poo2;
 import br.edu.ifg.poo2.converter.LocalDateConverter;
 import br.edu.ifg.poo2.converter.RacaConveter;
 import br.edu.ifg.poo2.converter.TamanhoConverter;
+import br.edu.ifg.poo2.interceptor.UsuarioInterceptor;
 import br.edu.ifg.poo2.repository.RacaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableAutoConfiguration
@@ -37,10 +39,20 @@ public class AppConfig implements WebMvcConfigurer {
         return new LocalDateConverter();
     }
 
+    @Bean
+    public UsuarioInterceptor getUsuarioInterceptor() {
+        return new UsuarioInterceptor();
+    }
+
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(getRacaConverter());
         registry.addConverter(getTamanhoConveter());
         registry.addConverter(getLocalDateConverter());
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(getUsuarioInterceptor());
     }
 }

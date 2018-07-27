@@ -17,7 +17,12 @@ public class UsuarioInterceptor extends HandlerInterceptorAdapter {
 
         String uri = request.getRequestURI();
 
-        if (uri.endsWith("/login") || uri.contains("css/") || uri.contains("js/") || uri.contains("img/") || uri.contains("fonts/"))
+        if (uri.endsWith("/login") ||
+                uri.contains("css/") ||
+                uri.contains("js/") ||
+                uri.contains("img/") ||
+                uri.contains("fonts/") ||
+                uri.endsWith("/cadastro"))
             return true;
 
         if (request.getSession().getAttribute(USUARIO_LOGADO) != null)

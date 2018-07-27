@@ -10,6 +10,7 @@ $(document).ready(function() {
           success: function(data) {
             $('#modal-cadastro-raca').modal('toggle');
             $(".racas").html(data);
+            $("#sel-raca").attr("name", "raca");
           }
 
         });
