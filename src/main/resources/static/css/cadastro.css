@@ -58,7 +58,7 @@ label{
     border-right: none;
 }
 
-.btn{
+.btn-cadastro2 {
     font-weight: 700;
     font-size:15px;
     color:#FFF;
@@ -67,6 +67,12 @@ label{
     padding:12px 30px;
     float:right;
     margin-top:40px;
+}
+
+.btn-salvar-modal {
+    color:#FFF;
+    border-radius: 0;
+    background: #ff8533;
 }
 
 .btn:hover{

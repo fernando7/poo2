@@ -1,0 +1,19 @@
+<div>
+    <label for="raca">Raça</label>
+
+    <div class="input-group">
+        <select name="racaId" class="form-control" id="raca" th:field="*{racas}">
+            <option th:each="raca : ${racas}"
+                    th:value="${raca.id}"
+                    th:text="${raca.descricao}"
+                    th:selected="(${raca.id} == ${racaPadrao})">
+            </option>
+        </select>
+
+        <span class="input-group-addon">
+            <a href="#modal-cadastro-raca" data-toggle="modal">
+                <span class="btn-add glyphicon glyphicon-plus"></span>
+            </a>
+        </span>
+    </div>
+</div>

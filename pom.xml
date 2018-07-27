@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>aulaspring</name>
+    <name>maya-tinder</name>
     <description>Maya Tinder</description>
 
     <parent>

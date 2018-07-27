@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Maya Tinder - Cadastro Animal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" id="bootstrap-css" href="css/bootstrap.min.css"/>
-
     <link href="css/font-awesome.min.css" rel="stylesheet">
-
     <link href="css/cadastro.css" rel="stylesheet">
-
 </head>
-
 <body>
-
 <div class="login">
     <div class="container">
 
@@ -29,22 +23,36 @@
 
                         <div class="form-group div1">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="descricao" class="form-control" required>
+                            <input id="nome" name="descricao" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="descricao">Descrição</label>
-                            <textarea type="text" id="descricao" name="descricao" class="form-control" required></textarea>
+                            <textarea type="text" id="descricao" name="descricao" class="form-control"
+                                      required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="raca">Raça</label>
-                            <select id="raca" th:field="*{racas}">
-                                <option value="">Selecione a raça</option>
-                                <option th:each="raca : ${racas}" th:value="${raca.id}" th:text="${raca.descricao}" selected="selected"></option>
-                            </select>
-                        </div>
+                            <div class="racas">
+                                <label for="raca">Raça</label>
 
+                                <div class="input-group">
+                                    <select name="racaId" class="form-control" id="raca" th:field="*{racas}">
+                                        <option value="">Selecione a raça</option>
+                                        <option th:each="raca : ${racas}"
+                                                th:value="${raca.id}"
+                                                th:text="${raca.descricao}">
+                                        </option>
+                                    </select>
+
+                                    <span class="input-group-addon">
+                                <a href="#modal-cadastro-raca" data-toggle="modal">
+                                    <span class="btn-add glyphicon glyphicon-plus"></span>
+                                </a>
+                            </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- right-box -->
@@ -55,33 +63,67 @@
 
                     <div class="form-group">
                         <label for="descricao">Data Nascimento</label>
-                        <input type="date" id="data-nascimento" name="dataNascimento" class="form-control table-condensed table-bordered table-striped" required>
+                        <input type="date" id="data-nascimento" name="dataNascimento"
+                               class="form-control table-condensed table-bordered table-striped" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="raca">Tamanho</label>
-                        <select id="tamanho" th:field="*{tamanhos}">
+                        <label for="cor">Cor</label>
+                        <input id="cor" name="cor" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tamanho">Tamanho</label>
+                        <select class="form-control" id="tamanho" th:field="*{tamanhos}">
                             <option value="">Selecione o tamanho</option>
-                            <option th:each="tamanho : ${tamanhos}" th:value="${tamanho}" th:text="${tamanho}" selected="selected"></option>
+                            <option th:each="tamanho : ${tamanhos}" th:value="${tamanho.name}"
+                                    th:text="${tamanho}"></option>
                         </select>
 
                     </div>
 
                     <div class="login-button">
-                        <button type="submit" class="btn btn-default orange-btn" href="principal.html">Cadastrar
+                        <button type="submit" class="btn-cadastro2 btn btn-default orange-btn" href="principal.html">
+                            Cadastrar
                         </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal-cadastro-raca" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Cadastro de Raça</h4>
+            </div>
+            <form id="form-cadastro-raca" action="cadastrar-raca" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="descricao-raca">Descrição</label>
+                        <input id="descricao-raca" name="descricao" class="form-control" required>
                     </div>
 
                 </div>
-
+                <div class="modal-footer">
+                    <input type="submit" value="Salvar" id="btn-salvar-raca"
+                           class="btn-salvar-modal btn btn-default btn-md"/>
+                </div>
             </form>
         </div>
-        <!--col-lg-8-->
 
     </div>
 </div>
-<script src="js/jquery-1.11.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
+<!--Fim Modal-->
 
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/cadastro-animal.js"></script>
+</body>
 </html>
